@@ -1,8 +1,6 @@
 package com.cfs.springPOC.controllers;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 import javax.validation.Valid;
@@ -20,18 +18,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cfs.springPOC.models.ERole;
-import com.cfs.springPOC.models.Role;
-import com.cfs.springPOC.models.User;
 import com.cfs.springPOC.payload.request.LoginRequest;
 import com.cfs.springPOC.payload.response.JwtResponse;
-import com.cfs.springPOC.payload.response.MessageResponse;
 import com.cfs.springPOC.repository.RoleRepository;
 import com.cfs.springPOC.repository.UserRepository;
 import com.cfs.springPOC.securityConfig.jwt.JwtUtils;
 import com.cfs.springPOC.securityConfig.services.UserDetailsImpl;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@CrossOrigin(origins = "https://cfsloginfrontend-82955.el.r.appspot.com", maxAge = 3600)
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
